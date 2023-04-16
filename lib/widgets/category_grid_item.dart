@@ -17,7 +17,7 @@ class CategoryGridItem extends StatelessWidget {
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(11),
       child: Container(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(11),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(11),
           gradient: LinearGradient(
