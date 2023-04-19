@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meals_app_v2/screens/meal_screen.dart';
+import 'package:meals_app_v2/screens/meal_detail_screen.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 import '../models/meal.dart';
@@ -13,7 +13,7 @@ class MealItem extends StatelessWidget {
   void _selectMeal(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (ctx) => MealScreen(
+        builder: (ctx) => MealDetailScreen(
           meal: meal,
         ),
       ),

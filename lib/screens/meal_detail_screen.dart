@@ -3,10 +3,10 @@ import 'package:transparent_image/transparent_image.dart';
 
 import '../models/meal.dart';
 
-class MealScreen extends StatelessWidget {
+class MealDetailScreen extends StatelessWidget {
   final Meal meal;
 
-  const MealScreen({super.key, required this.meal});
+  const MealDetailScreen({super.key, required this.meal});
 
   @override
   Widget build(BuildContext context) {
