@@ -8,13 +8,13 @@ import '../models/meal.dart';
 class MealDetailScreen extends ConsumerWidget {
   final Meal meal;
 
-  const MealDetailScreen({
-    super.key,
-    required this.meal,
-  });
+  const MealDetailScreen({super.key, required this.meal});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final favoriteMeals = ref.watch(favoriteMealsProvider);
+    final isFavorite = favoriteMeals.contains(meal);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(meal.title),
@@ -32,9 +32,7 @@ class MealDetailScreen extends ConsumerWidget {
                 ),
               );
             },
-            icon: const Icon(
-              Icons.star,
-            ),
+            icon: Icon(isFavorite ? Icons.star : Icons.star_border),
           ),
         ],
       ),
